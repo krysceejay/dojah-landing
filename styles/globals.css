@@ -35,17 +35,12 @@
 }
 
 .strt {
-  /* background-image: url('https://dojah.io/assets/images/image-cta.svg');
-  background-blend-mode: overlay;
-  background-size: cover;
-  background-color: #3977de; */
-  /* background: #3977de;
-  background-image: url('https://dojah.io/assets/images/image-cta.svg');
-  background-image: url('https://dojah.io/assets/images/image-cta.svg'),
-    linear-gradient(#3977de, #d13531); */
-
-  background: linear-gradient(to bottom right, #357beb, #3977de, transparent)
-      fixed,
+  background: linear-gradient(
+      to bottom right,
+      #307bf3,
+      rgb(57, 119, 222, 0.4),
+      transparent
+    ),
     url('https://dojah.io/assets/images/image-cta.svg') no-repeat;
   background-size: cover;
 }

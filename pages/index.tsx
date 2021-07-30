@@ -21,19 +21,48 @@ export default function Home() {
           <div>
             <a href="" className="font-medium text-sm text-gray-500">Visit our API Documentation</a>
           </div>
-          
         </div>
-
-        <img className="w-22 h-22 object-cover absolute top-3 left-82" src="/img/ellipse3.png" />
-        <img className="w-40 h-40 object-cover absolute top-40 left-75" src="/img/ellipse2.png" />
-        <img className="w-22 h-22 object-cover absolute top-85 left-53" src="/img/ellipse4.png" />
-        <img className="w-22 h-22 object-cover absolute top-11 right-66" src="/img/ellipse5.png" />
-        <img className="w-40 h-40 object-cover absolute top-48 right-78" src="/img/ellipse6.png" />
-        <img className="w-22 h-22 object-cover absolute top-98 right-54" src="/img/ellipse7.png" />
-        <img className="w-244 h-112 object-cover absolute inset-x-0 m-auto" src="/img/image2.png" />
+        <div className="absolute top-3 left-82">
+          <div className="relative">
+            <img className="w-22 h-22 object-cover" src="/img/ellipse3.png" />
+            <img className="absolute top-0 -left-4" src="/img/rectangle.png" />
+          </div>
+        </div>
+        <div className="absolute top-40 left-75">
+          <div className="relative">
+          <img className="w-40 h-40 object-cover" src="/img/ellipse2.png" />
+            <img className="absolute -top-1 right-3" src="/img/rectangle.png" />
+          </div>
+        </div>
+        <div className="absolute top-85 left-53">
+          <div className="relative">
+            <img className="w-22 h-22 object-cover" src="/img/ellipse4.png" />
+            <img className="absolute -top-2 -left-2" src="/img/rectangle.png" />
+          </div>
+        </div>
+        <div className="absolute top-11 right-66">
+          <div className="relative">
+            <img className="w-22 h-22 object-cover " src="/img/ellipse5.png" />
+            <img className="absolute -top-1 -right-3" src="/img/rectangle.png" />
+          </div>
+        </div>
+        <div className="absolute top-48 right-78">
+          <div className="relative">
+            <img className="w-40 h-40 object-cover " src="/img/ellipse6.png" />
+            <img className="absolute top-2 right-0" src="/img/rectangle.png" />
+          </div>
+        </div>
+        <div className="absolute top-98 right-54">
+          <div className="relative">
+            <img className="w-22 h-22 object-cover" src="/img/ellipse7.png" />
+            <img className="absolute -top-2 -left-2" src="/img/rectangle.png" />
+          </div>
+        </div>
+      
         
       </section>
-      <div className="diagonal-gd h-28">
+      <div className="diagonal-gd h-28 relative">
+        <img className="w-244 h-112 object-cover absolute inset-x-0 m-auto -top-48" src="/img/image2.png" />
       </div>
       <section className="flex justify-center items-center bg-dia-color">
         <div className="pt-56 pb-16 w-full">
