@@ -1,16 +1,53 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+@font-face {
+  font-family: 'Athletics';
+  font-style: normal;
+  src: url('/font/Athletics Black.otf') format('truetype');
+  src: url('/font/Athletics Bold.otf') format('truetype');
+  src: url('/font/Athletics ExtraBold.otf') format('truetype');
+  src: url('/font/Athletics Light.otf') format('truetype');
+  src: url('/font/Athletics Medium.otf') format('truetype');
+  src: url('/font/Athletics Regular.otf') format('truetype');
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+@tailwind base;
+@tailwind components;
+
+.diagonal-gd {
+  background: #212531;
+  background: linear-gradient(to right bottom, #fff 50%, #1b2a4e 50%);
 }
 
-* {
-  box-sizing: border-box;
+.list li {
+  position: relative;
+  margin-left: 18px;
+  margin-bottom: 8px;
 }
+
+.list li::before {
+  position: absolute;
+  content: '\2022';
+  color: #3977de;
+  font-weight: bold;
+  display: inline-block;
+  width: 28px;
+  font-size: 28px;
+  left: -18px;
+}
+
+.strt {
+  /* background-image: url('https://dojah.io/assets/images/image-cta.svg');
+  background-blend-mode: overlay;
+  background-size: cover;
+  background-color: #3977de; */
+  /* background: #3977de;
+  background-image: url('https://dojah.io/assets/images/image-cta.svg');
+  background-image: url('https://dojah.io/assets/images/image-cta.svg'),
+    linear-gradient(#3977de, #d13531); */
+
+  background: linear-gradient(to bottom right, #357beb, #3977de, transparent)
+      fixed,
+    url('https://dojah.io/assets/images/image-cta.svg') no-repeat;
+  background-size: cover;
+}
+
+@tailwind utilities;
