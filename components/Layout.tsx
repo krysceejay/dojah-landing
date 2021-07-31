@@ -13,33 +13,36 @@ const Layout: FC<IProps> = ({ children, title }) => {
       <Head>
         <title>{title}</title>
       </Head>
-      <nav className="flex justify-evenly items-center sticky top-0 z-40 px-20 py-4 bg-white">
+      <nav className="flex justify-between xl:justify-evenly items-center sticky top-0 z-40 px-8 lg:px-12 xl:px-20 py-4 bg-red-400">
         <Image src="/img/logo.png" alt="Logo" width={86} height={29} />
-        <ul className="flex">
-          <li className="px-6 py-1">
+        <ul className="hidden md:flex">
+          <li className="px-2 lg:px-3 xl:px-6 py-1">
             <a href="" className="font-medium text-sm text-gray-500">Services</a>
           </li>
-          <li className="px-6 py-1">
+          <li className="px-2 lg:px-3 xl:px-6 py-1">
             <a href="" className="font-medium text-sm text-gray-500">Pricing</a>
           </li>
-          <li className="px-6 py-1">
+          <li className="px-2 lg:px-3 xl:px-6 py-1">
             <a href="" className="font-medium text-sm text-gray-500">Documentation</a>
           </li>
-          <li className="px-6 py-1">
+          <li className="px-2 lg:px-3 xl:px-6 py-1">
             <a href="" className="font-medium text-sm text-gray-500">Blog</a>
           </li>
-          <li className="px-6 py-1">
+          <li className="px-2 lg:px-3 xl:px-6 py-1">
             <a href="" className="font-medium text-sm text-gray-500">FAQs</a>
           </li>
-          <li className="px-6 py-1">
+          <li className="px-2 lg:px-3 xl:px-6 py-1">
             <a href="" className="font-medium text-sm text-gray-500">Contact</a>
           </li>
         </ul>
-        <div className="flex items-center">
+        <div className="hidden md:flex items-center">
           <a href="" className="font-medium text-sm text-gray-500 mr-3">Login</a>
           <button className="bg-brand-color hover:bg-blue-600 text-white font-medium text-sm py-3.5 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
             Get started
           </button>
+        </div>
+        <div id="dash-bar" className="menu-icon md:hidden">
+          <span></span>
         </div>
       </nav>
       {children}

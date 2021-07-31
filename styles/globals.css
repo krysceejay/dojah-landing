@@ -45,4 +45,46 @@
   background-size: cover;
 }
 
+.menu-icon {
+  position: absolute;
+  top: 0.6rem;
+  right: 2rem;
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+  z-index: 1;
+  background: transparent;
+}
+
+.menu-icon span {
+  display: block;
+  width: 2rem;
+  height: 3px;
+  background: #262626;
+  position: absolute;
+  top: 15px;
+  transition: 0.5s;
+}
+
+.menu-icon span:before {
+  content: '';
+  position: absolute;
+  top: -8px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: #262626;
+  transition: 0.5s;
+}
+.menu-icon span:after {
+  content: '';
+  position: absolute;
+  top: 8px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: #262626;
+  transition: 0.5s;
+}
+
 @tailwind utilities;
