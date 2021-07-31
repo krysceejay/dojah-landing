@@ -87,4 +87,17 @@
   transition: 0.5s;
 }
 
+.toggle span {
+  background: transparent;
+}
+
+.toggle span:before {
+  top: 0;
+  transform: rotate(45deg);
+}
+.toggle span:after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+
 @tailwind utilities;

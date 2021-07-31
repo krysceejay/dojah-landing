@@ -8,7 +8,7 @@ export default function Home() {
           Onboard users across Africa in seconds
           <img className="w-22 h-22 object-cover absolute -top-12 right-14 -z-10" src="/img/ellipse1.png" />
         </div>
-        <div className="w-100 leading-xlg-h mx-auto mt-4">
+        <div className="w-full sm:w-100 leading-xlg-h mx-auto mt-4">
           <p className="text-gray-500 px-4">Seamlessly identify and verify individuals and businesses via access to simple, easy-to-understand APIs</p>
           <div className="flex justify-center items-center gap-4 mt-4 mb-6">
             <button className="bg-brand-color hover:bg-blue-600 text-white font-medium text-sm py-3.5 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
@@ -194,8 +194,7 @@ export default function Home() {
         </div>
       </section>
       <section className="grid gap-8 px-8 lg:px-24 xl:px-40 py-24">
-        <div className="row-start-1 row-end-2 col-start-1 col-end-4 lg:col-end-2">
-          <div className="">
+        <div className="row-start-1 row-end-2 col-start-1 col-end-4 lg:col-end-2 w-full">
             <div className="h-1 w-14 bg-brand-color"></div>
             <div className="pt-4">
               <h4 className="font-extrabold text-3xl">Read our case studies</h4>
@@ -209,12 +208,11 @@ export default function Home() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
               </svg>
             </div>
-          </div>
         </div>
         <div className="row-start-2 row-end-3 lg:row-end-5 col-span-4 sm:col-span-2 col-start-1 lg:col-end-2 relative">
           <img src="/img/rectangle5.png" alt="image" className="w-full h-75 lg:h-144 object-cover rounded" />
-          <div className="absolute bottom-10 left-8 w-7/12">
-            <h4 className="text-xl text-white">Authorizing requests and identifying your application</h4>
+          <div className="absolute bottom-10 left-8 w-3/4 lg:w-7/12">
+            <h4 className="text-lg lg:text-xl text-white">Authorizing requests and identifying your application</h4>
             <div className="h-0.1 w-4/5 mt-4 bg-white"></div>
             <div className="mt-4 text-white">
               <a href="" className="font-medium text-sm">Continue reading</a>
@@ -226,8 +224,8 @@ export default function Home() {
         </div>
         <div className="row-start-3 row-end-4 sm:row-start-2 sm:row-end-3 lg:row-start-1 col-span-4 sm:col-span-2 col-start-1 lg:col-start-2 lg:col-end-4 relative">
           <img src="/img/rectangle4.png" alt="image" className="w-full h-full object-cover rounded" />
-          <div className="absolute bottom-10 left-8 w-7/12">
-            <h4 className="text-xl text-white">Authorizing requests and identifying your application</h4>
+          <div className="absolute bottom-10 left-8 w-3/4 lg:w-7/12">
+            <h4 className="text-lg lg:text-xl text-white">Authorizing requests and identifying your application</h4>
             <div className="h-0.1 w-4/5 mt-4 bg-white"></div>
             <div className="mt-4 text-white">
               <a href="" className="font-medium text-sm">Continue reading</a>
@@ -238,9 +236,9 @@ export default function Home() {
           </div>
         </div>
         <div className="col-span-4 sm:col-span-2 lg:col-start-2 lg:col-end-3 row-start-4 row-end-5 sm:row-start-3 sm:row-end-4 lg:row-end-5 relative">
-          <img src="/img/rectangle3.png" alt="image" className="w-full h-full object-cover rounded" />
-          <div className="absolute bottom-10 left-8 w-3/5">
-            <h4 className="text-xl text-white">Authorizing requests and identifying your application</h4>
+          <img src="/img/rectangle3.png" alt="image" className="w-full h-75 lg:h-full object-cover rounded" />
+          <div className="absolute bottom-10 left-8 w-4/5 lg:w-3/5">
+            <h4 className="text-lg lg:text-xl text-white">Authorizing requests and identifying your application</h4>
             <div className="h-0.1 w-4/5 mt-4 bg-white"></div>
             <div className="mt-4 text-white">
               <a href="" className="font-medium text-sm">Continue reading</a>
@@ -251,9 +249,9 @@ export default function Home() {
           </div>
         </div>
         <div className="col-span-4 sm:col-span-2 lg:col-start-3 lg:col-end-4 row-start-5 row-end-6 sm:row-start-3 sm:row-end-4 lg:row-end-5 relative">
-          <img src="/img/rectangle2.png" alt="image" className="w-full h-full object-cover rounded" />
-          <div className="absolute bottom-10 left-8 w-3/5">
-            <h4 className="text-xl text-white">Authorizing requests and identifying your application</h4>
+          <img src="/img/rectangle2.png" alt="image" className="w-full h-75 lg:h-full object-cover rounded" />
+          <div className="absolute bottom-10 left-8 w-4/5 lg:w-3/5">
+            <h4 className="text-lg lg:text-xl text-white">Authorizing requests and identifying your application</h4>
             <div className="h-0.1 w-4/5 mt-4 bg-white"></div>
             <div className="mt-4 text-white">
               <a href="" className="font-medium text-sm">Continue reading</a>
@@ -265,20 +263,20 @@ export default function Home() {
         </div>
       </section>
       <section className="strt">
-          <div className="w-2/5 pl-40 py-24">
-          <h5 className="font-bold text-xl text-white">You want to build? We are ready to build with you, we are just an api call away.</h5>
-          
-          <div className="flex items-center gap-4 mt-6 mb-6">
-            <button className="font-medium bg-demo-btn text-brand-color text-sm py-3.5 px-4 rounded inline-flex items-center">
-              <span className="mr-2">Get started</span>
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-              </svg>
-            </button>
-            <button className="text-white border-white border font-medium text-sm py-3.5 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
-              Schedule a demo
-            </button>
-          </div>
+          <div className="w-full px-8 md:pr-0 md:w-1/2 md:pl-20 xl:pl-40 py-24 text-center md:text-left">
+            <h5 className="font-bold text-xl text-white">You want to build? We are ready to build with you, we are just an api call away.</h5>
+            
+            <div className="flex justify-center md:justify-start items-center gap-4 mt-6 mb-6 ">
+              <button className="font-medium bg-demo-btn text-brand-color text-sm py-3.5 px-4 rounded inline-flex items-center">
+                <span className="mr-2">Get started</span>
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </button>
+              <button className="text-white border-white border font-medium text-sm py-3.5 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
+                Schedule a demo
+              </button>
+            </div>
         </div>
       </section>
     </Layout>

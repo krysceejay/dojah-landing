@@ -1,6 +1,5 @@
-import {FC, ReactNode} from "react"
+import {FC, ReactNode, useRef} from "react"
 import Head from "next/head"
-import Image from 'next/image'
 
 interface IProps {
   children: ReactNode,
@@ -8,14 +7,54 @@ interface IProps {
 }
 
 const Layout: FC<IProps> = ({ children, title }) => {
+
+    const barRef = useRef<HTMLDivElement>(null)
+    const menuRef = useRef<HTMLDivElement>(null)
+
+    const handleShow = () => {
+      menuRef.current?.classList.toggle("hidden")
+      barRef.current?.classList.toggle("toggle")   
+  }
+
   return (
     <>
       <Head>
         <title>{title}</title>
       </Head>
-      <nav className="flex justify-between xl:justify-evenly items-center sticky top-0 z-40 px-8 lg:px-12 xl:px-20 py-4 bg-red-400">
-        <Image src="/img/logo.png" alt="Logo" width={86} height={29} />
-        <ul className="hidden md:flex">
+      <nav className="flex items-center sticky top-0 z-40 px-8 lg:px-12 xl:px-20 py-4 bg-white">
+        
+          <img src="/img/logo.png" alt="Logo" width={86} height={29}  />
+        
+        <div className="hidden absolute top-14 left-0 right-0 md:static md:flex flex-1 justify-around items-center bg-white md:ml-12 p-4 md:p-0" ref={menuRef}>
+          <ul className="block md:flex items-center">
+            <li className="px-2 lg:px-3 xl:px-6 py-1">
+              <a href="" className="font-medium text-sm text-gray-500">Services</a>
+            </li>
+            <li className="px-2 lg:px-3 xl:px-6 py-1">
+              <a href="" className="font-medium text-sm text-gray-500">Pricing</a>
+            </li>
+            <li className="px-2 lg:px-3 xl:px-6 py-1">
+              <a href="" className="font-medium text-sm text-gray-500">Documentation</a>
+            </li>
+            <li className="px-2 lg:px-3 xl:px-6 py-1">
+              <a href="" className="font-medium text-sm text-gray-500">Blog</a>
+            </li>
+            <li className="px-2 lg:px-3 xl:px-6 py-1">
+              <a href="" className="font-medium text-sm text-gray-500">FAQs</a>
+            </li>
+            <li className="px-2 lg:px-3 xl:px-6 py-1">
+              <a href="" className="font-medium text-sm text-gray-500">Contact</a>
+            </li>
+          </ul>
+          <div className="block md:flex items-center px-2 md:px-0">
+            <a href="" className="font-medium text-sm text-gray-500 block my-4 md:my-0 md:mr-3">Login</a>
+            <button className="bg-brand-color hover:bg-blue-600 text-white font-medium text-sm py-3.5 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
+              Get started
+            </button>
+          </div>
+        </div>
+
+        {/* <ul className="absolute top-16 left-0 right-0 bg-yellow-800 block md:static md:flex">
           <li className="px-2 lg:px-3 xl:px-6 py-1">
             <a href="" className="font-medium text-sm text-gray-500">Services</a>
           </li>
@@ -35,19 +74,19 @@ const Layout: FC<IProps> = ({ children, title }) => {
             <a href="" className="font-medium text-sm text-gray-500">Contact</a>
           </li>
         </ul>
-        <div className="hidden md:flex items-center">
+        <div className="absolute top-16 left-0 right-0 bg-green-500 md:static md:flex items-center">
           <a href="" className="font-medium text-sm text-gray-500 mr-3">Login</a>
           <button className="bg-brand-color hover:bg-blue-600 text-white font-medium text-sm py-3.5 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
             Get started
           </button>
-        </div>
-        <div id="dash-bar" className="menu-icon md:hidden">
+        </div> */}
+        <div id="dash-bar" className="menu-icon md:hidden" ref={barRef} onClick={handleShow}>
           <span></span>
         </div>
       </nav>
       {children}
       <footer className="py-24 bg-dia-color">
-        <section className="grid grid-cols-4 gap-4 px-40">
+        <section className="grid grid-cols-2 text-center md:text-left md:grid-cols-4 gap-4 px-10 xl:px-40">
           <div>
             <h3 className="font-bold text-xl text-blue-500">Company</h3>
             <ul className="mt-6">
@@ -85,9 +124,9 @@ const Layout: FC<IProps> = ({ children, title }) => {
             </ul>
           </div>
         </section>
-        <section className="px-40 mt-4">
-          <img src="/img/favicon21.png" alt="image" className="inline-block" />
-          <div className="inline-block text-blue-300 ml-6">
+        <section className="px-10 xl:px-40 mt-4 text-center md:text-left">
+          <img src="/img/favicon21.png" alt="image" className="block mb-4 sm:mb-0 sm:inline-block mx-auto" />
+          <div className="inline-block text-blue-300 sm:ml-6">
             <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
             </svg>
@@ -99,7 +138,7 @@ const Layout: FC<IProps> = ({ children, title }) => {
             </svg>
             <span className="font-medium text-base ml-3">info@dojah.io</span>
           </div>
-          <div className="inline-block ml-6">
+          <div className="block sm:inline-block sm:ml-6 mt-8 sm:mt-0">
             <img src="/img/twitter.png" alt="image" className="inline-block mr-6" />
             <img src="/img/slack.png" alt="image" className="inline-block mr-6" />
             <img src="/img/instagram.png" alt="image" className="inline-block mr-6" />
